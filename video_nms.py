@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture("mask1.mp4")
+cap = cv2.VideoCapture(0)
 
 if (cap.isOpened()== False):
     print("Error opening video stream or file")
@@ -77,7 +77,6 @@ def detect_object(img, returndata=False, conf = 0.0):
 
             max_class_id = max_valueid[0]
 
-            print(max_class_id)
             if max_class_id == np.NaN:
                 pass
 
