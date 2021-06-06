@@ -16,13 +16,13 @@
 
 ### With mask
 
-![Image1](https://raw.githubusercontent.com/chunmusic/Face_Mask_Detection/master/images/with_mask.png)
+![Image1](https://raw.githubusercontent.com/chunmusic/Face_Mask_Detection/master/screenshot/with_mask.png)
 
 
 ### Without mask
 
-![Image2](https://raw.githubusercontent.com/chunmusic/Face_Mask_Detection/master/images/without_mask.png)
+![Image2](https://raw.githubusercontent.com/chunmusic/Face_Mask_Detection/master/screenshot/without_mask.png)
 
 ### Wear mask incorrect
 
-![Image3](https://raw.githubusercontent.com/chunmusic/Face_Mask_Detection/master/images/wear_mask_incorrect.png)
+![Image3](https://raw.githubusercontent.com/chunmusic/Face_Mask_Detection/master/screenshot/wear_mask_incorrect.png)
