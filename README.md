@@ -10,7 +10,9 @@
 
 - Please run the following command to use your webcam as a detection camera.
 
+```python
     python video_nms.py
+```
 
 ## Preview
 
