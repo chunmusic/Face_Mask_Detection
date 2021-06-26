@@ -1,7 +1,11 @@
 import cv2
 import numpy as np
+import time
 
 cap = cv2.VideoCapture(0)
+
+prev_frame_time = 0
+new_frame_time = 0
 
 if (cap.isOpened()== False):
     print("Error opening video stream or file")
@@ -12,10 +16,11 @@ def initialize(pbtxt = 'graph.pbtxt',
     
     # Define global variables
     global net, classes
- 
+
     # ReadNet function takes both files and intitialize the network
     net = cv2.dnn.readNetFromTensorflow(model, pbtxt);
- 
+    net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+    net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
     # Define Class Labels
     classes = {1: "with_mask", 2: "without_mask", 3: "mask_weared_incorrect"}
 
@@ -96,21 +101,30 @@ def detect_object(img, returndata=False, conf = 0.0):
                 # Draw the bounding box
                 cv2.rectangle(img, (box[0], box[1]), (box[2], box[3]), (125, 255, 51), thickness = 2)
             
-    cv2.imshow("img",img)
 
-    cv2.waitKey(1)
-
+    return img
 
 
 if __name__== "__main__":
     initialize()
-
+    
     while(cap.isOpened()):
 
         ret, img = cap.read()
 
-        detect_object(img)
+        ret_img = detect_object(img)
 
+	new_frame_time = time.time()
+
+	fps = 1/(new_frame_time-prev_frame_time)
+	prev_frame_time = new_frame_time
+
+	cv2.putText(ret_img,"FPS: "+str(int(fps)), (7,70), cv2.FONT_HERSHEY_SIMPLEX,3,(100,255,0),3,cv2.LINE_AA)
+
+	cv2.imshow("img",ret_img)
+
+	if cv2.waitKey(1) == ord('q'):
+	    break
 
 
 cap.release()
