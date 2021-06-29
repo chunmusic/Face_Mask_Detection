@@ -4,7 +4,7 @@
 
 - The model was trained based on SSD Inception V2 architecture by Tensorflow 1.
 
-- With Opencv DNN, it can perform up to 7-9 FPS on Nvidia Jetson NX.
+- With Opencv DNN, it can run up to 30 FPS on RTX3080 and 7-9 FPS on Nvidia Jetson NX.
 
 - The dataset used for training this model is from (https://www.kaggle.com/andrewmvd/face-mask-detection)
 
