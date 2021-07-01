@@ -114,17 +114,17 @@ if __name__== "__main__":
 
         ret_img = detect_object(img)
 
-	new_frame_time = time.time()
+        new_frame_time = time.time()
 
-	fps = 1/(new_frame_time-prev_frame_time)
-	prev_frame_time = new_frame_time
+        fps = 1/(new_frame_time-prev_frame_time)
+        prev_frame_time = new_frame_time
 
-	cv2.putText(ret_img,"FPS: "+str(int(fps)), (7,70), cv2.FONT_HERSHEY_SIMPLEX,3,(100,255,0),3,cv2.LINE_AA)
+        cv2.putText(ret_img,"FPS: "+str(int(fps)), (7,70), cv2.FONT_HERSHEY_SIMPLEX,3,(100,255,0),3,cv2.LINE_AA)
 
-	cv2.imshow("img",ret_img)
+        cv2.imshow("img",ret_img)
 
-	if cv2.waitKey(1) == ord('q'):
-	    break
+        if cv2.waitKey(1) == ord('q'):
+            break
 
 
 cap.release()
