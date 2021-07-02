@@ -6,7 +6,7 @@
 
 - It can run up to 30 FPS on RTX3080 and 7-9 FPS on Nvidia Jetson NX with CUDA Backend.
 
-- It can run up to 10 FPS on i7-8550u
+- It can run up to 10 FPS (Python) and 15 FPS (C++) on i7-8550u
 
 - The dataset used for training this model is from (https://www.kaggle.com/andrewmvd/face-mask-detection)
 
