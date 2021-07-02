@@ -99,7 +99,6 @@ int main( int argc, char** argv ) {
     cap.read(frame);
 
     if (frame.empty()){
-      std::cerr << "ERROR! blank frame grabbed \n";
       break;
     }
 

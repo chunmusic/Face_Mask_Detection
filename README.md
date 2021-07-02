@@ -4,9 +4,11 @@
 
 - The model was trained based on SSD Inception V2 architecture by Tensorflow 1.
 
-- It can run up to 30 FPS on RTX3080 and 7-9 FPS on Nvidia Jetson NX with CUDA Backend.
+- On RTX3080, it can run up to 45 FPS (Python)
 
-- It can run up to 10 FPS (Python) and 15 FPS (C++) on i7-8550u
+- On i7-8550u, it can run up to 10 FPS (Python) and 15 FPS (C++)
+
+- On Nvidia-Jetson NX, it can run up to 7-9 FPS (Python)
 
 - The dataset used for training this model is from (https://www.kaggle.com/andrewmvd/face-mask-detection)
 
