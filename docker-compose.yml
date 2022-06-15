@@ -3,10 +3,14 @@ version: "3"
 services: 
     server:
         build: server/
-        command: python3 ./video.py
+        command: python3 ./video_nms.py
 
         environment:
             DISPLAY: $DISPLAY
+
+        devices:
+            - "/dev/video0:/dev/video0"
+    
         volumes:
             - /tmp/.X11-unix:/tmp/.X11-unix
             - ~/.Xauthority:/root/.Xauthority

@@ -14,12 +14,17 @@
 
 ## How to use
 
+#### Normal Operation
 - Please run the following command to use your webcam as a detection camera.
 
 ```python
 python video_nms.py
 ```
-
+#### Run using Docker
+```docker
+xhost +local:docker # To allow xhost for docker container
+docker compose up --build
+```
 ## Preview
 
 ### With mask

@@ -18,8 +18,8 @@ void initialize(std::string pbtxt = "graph.pbtxt",
   net = cv::dnn::readNetFromTensorflow(model,pbtxt);
 
   // Uncomment in case of having cuda
-  // net.setPreferableBackend(cv::dnn::DNN_BACKEND_CUDA);
-  // net.setPreferableTarget(cv::dnn::DNN_TARGET_CUDA);
+  net.setPreferableBackend(cv::dnn::DNN_BACKEND_CUDA);
+  net.setPreferableTarget(cv::dnn::DNN_TARGET_CUDA);
 
 }
 
